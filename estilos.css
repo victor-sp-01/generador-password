@@ -62,7 +62,7 @@
 .di-gndr-itm-ii-opc-itms{
     background: none; position: relative;
     justify-content: space-between; align-items: center;
-    display: flex; width: 400px; height: 60px;
+    display: flex; max-width: 400px; width: calc(100% - 5px); height: 60px;
 }
 .di-gndr-itm-ii-opc-itms span{ max-width: 45%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .ipt-gndr-itm{

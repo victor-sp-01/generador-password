@@ -9,7 +9,7 @@ const generador = {
     numeros             : '0123456789',
     caracteres          : '({[@/¡?¿!]})'
 }
-const generadori = {
+const generadori = { 
     letra : 25,
     numero: 9,
     caracter:11,

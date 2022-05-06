@@ -49,8 +49,9 @@
 
 
 .di-gndr-itm-ii-opc{
-    background: none; width: auto; height: calc(100% - 100px);
+    background: none; width: auto; height: calc(100% - 100px); overflow-y:auto;
 }
+.di-gndr-itm-ii-opc::-webkit-scrollbar{ width: 0; height: 0; }
 
 .di-ind-lenght{
     background: #88A8E0; color: white;

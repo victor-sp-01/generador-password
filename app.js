@@ -19,12 +19,13 @@ const generadori = {
 const valores = {
     contador: 0,
     palabra_final : '',
-    palabra_aleatorio : []
+    palabra_aleatorio : [],
+    copiar : false
 }
 
 //eventos:
 formulario.addEventListener('submit', (e)=>{ e.preventDefault(); validar_generador(); })
-formulario_gnr.btn_copy.addEventListener('click', (e)=>{ e.preventDefault(); generador_copiar(); })
+formulario_gnr.addEventListener('click', (e)=>{ e.preventDefault(); generador_copiar(); })
 formulario.ipt_lenght.addEventListener('change', ()=>{ id_lenght.innerText = ipt_lenght.value; })
 
 //funciones:
@@ -39,6 +40,7 @@ const validar_generador =()=>{
 }
 
 const generador_copiar = () =>{
+    if(!valores.copiar){ return }
     formulario_gnr.ipt_generado.select();
     document.execCommand('copy');
     formulario_gnr.ipt_generado.blur();
@@ -66,7 +68,7 @@ const generador_aleatorio =()=>{
     formulario_gnr.ipt_generado.value = valores.palabra_final ;
     formulario_gnr.btn_copy.classList.add('on');
     window.id_lenght.innerText = ipt_lenght.value;
-    valores.palabra_final  = '';
+    valores.palabra_final  = ''; valores.copiar = true
 }
 
 

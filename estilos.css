@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;   
+    font-family: 'Poppins', sans-serif;
+}
+
+.di-gndr{
+    background: none;
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    justify-content: center; align-items: center; display: flex;
+}
+.di-gndr-itm{
+    background: #88A8E0; border-radius: 5px; box-shadow: 0 0 3px 1px rgb(0, 0, 0, .1);
+    width: 100%; height: 100%; max-width: 750px; max-height: 750px;
+    overflow: hidden;
+}
+.di-gndr-itm-i{
+    background: none;
+    justify-content: center; align-items: center;
+    display: flex; width: 100%; height: 150px;
+}
+.frm-gndr-itm-i{
+    background-color: none;position: relative;
+    justify-content: center; align-items: center;
+    display: flex; width: 400px; height: auto;
+}
+.frm-gndr-itm-i::before{
+    content: "copiado"; background: none; position: absolute; bottom: -40px;
+    display: none; width: auto; height: auto; color: white;
+}
+.ipt-gnd-itm-pass{
+    background: none; border: none; outline: none; text-align: center; pointer-events: none;
+    max-width: calc(100% - 15px); white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    width: 100%; height: auto; font-size: 20px; color: white;
+}
+.btn-gnd-copy{
+    background: none; border-radius: 3px; border: 1.5px solid white; transition: .4s ease-in-out;
+    position: absolute; right: -85px; color: white; cursor: pointer;
+    max-width: 70px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    width: 70px; height: auto; padding: 10px ; display: none;
+}
+
+.frm-gndr-itm-ii{
+    background: white; border-radius: 10px 10px 0 0;
+    justify-content: center; align-items: center; flex-direction: column;
+    display: flex; width: 100%; height: calc(100% - 150px);
+}
+
+
+.di-gndr-itm-ii-opc{
+    background: none; width: auto; height: calc(100% - 100px);
+}
+
+.di-ind-lenght{
+    background: #88A8E0; color: white;
+    justify-content: center; align-items: center; 
+    display: flex; width: 80px; height: 40px; border-radius: 40px;
+}
+
+.di-gndr-itm-ii-opc-itms{
+    background: none; position: relative;
+    justify-content: space-between; align-items: center;
+    display: flex; width: 400px; height: 60px;
+}
+.di-gndr-itm-ii-opc-itms span{ max-width: 45%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.ipt-gndr-itm{
+    width: 0; height: 0; visibility: hidden;
+}
+.ipt-lenght{ -webkit-appearance: none; overflow: hidden; width: calc(100% - 30px); position: relative; top: 3px; background: none; }
+.ipt-lenght::-webkit-slider-runnable-track{
+    background-color: #88A8E0; 
+    -webkit-appearance: none; height: 15px;
+    margin-left: 5px; margin-right: 5px; border-radius: 15px; padding: 0 2.5px;
+}
+.ipt-lenght::-webkit-slider-thumb{ background: white; -webkit-appearance: none; width: 10px; height: 10px; border-radius: 10px; margin: 2.5px 0; }
+.lbl-gndr-itm{
+    background: white; transition: .4s ease-in-out;
+    position: absolute; right: 0; justify-content: left; align-items: center; 
+    display: flex; width: 80px; height: 40px; border-radius: 40px; border: 1px solid rgb(0, 0, 0, .1);
+}
+
+.lbl-gndr-itm::before{
+    transition: .4s ease-in-out;
+    content: ""; background: rgb(0, 0, 0, .1); position: absolute; left: 2.5px;
+    display: block; width: 35px; height: 35px; border-radius: 35px;
+}
+
+
+.di-gndr-btn{
+    background: none; width: auto; height: auto;
+}
+.btn-gndr{
+    background: #88A8E0; border: 1.5px solid #88A8E0; border-radius: 3px; cursor: pointer;
+    width: 400px; height: 60px; color: white; transition: .4s ease-in-out;
+}
+/* acciones */
+.ipt-gndr-itm:checked + .lbl-gndr-itm{ border: 1px solid #88A8E0; }
+.ipt-gndr-itm:checked + .lbl-gndr-itm::before{ left: 40px; background: #88A8E0; }
+.btn-gndr:hover{ background: none; color: #88A8E0; }
+
+.frm-gndr-itm-i.copy::before,
+.btn-gnd-copy.on{ display: block; }
+.btn-gnd-copy:hover{ background: white; color: #88A8E0; }
